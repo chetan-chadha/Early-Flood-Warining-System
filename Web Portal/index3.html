@@ -1,0 +1,337 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+ul
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:00CC00
+}
+li
+{
+	float:left;
+}
+li a, .dropbtn
+{
+	display: inline-block;
+	color:white;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration:none;
+}
+li a:hover, .dropdown:hover .dropbtn
+{
+	background-color:009900;
+}
+li.dropdown
+{
+	display:inline-block;
+
+}
+.dropdown-content
+{
+	display: none;
+	position: absolute;
+	background-color:#f9f9f9;
+	min-width:160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index:1;
+}
+.dropdown-content a
+{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-content a:hover
+{
+	background-color:#f1f1f1;
+}
+.dropdown:hover .dropdown-content
+{
+	display:block;
+}
+table
+{
+	margin-top:50px;
+	width:100%;
+}
+table,th,td
+{
+	border:1px solid black;
+	border-collapse: collapse;
+}
+th
+{
+	padding: 5px;
+	text-align: center;
+	background-color:0033CC;
+	color:white;
+	font-size:22px;
+}
+td
+{
+	padding: 5px;
+	text-align: center;
+}
+table#01tr:nth-child(even)
+{
+  background-color:#BEBEBE;
+}
+table#t01 tr:nth-child(odd)
+{
+	background-color:#fff;
+}
+table#t01 th
+{
+	background-color:0033CC;
+	color:white;
+}
+button
+{
+	display: inline-block;
+	cursor:pointer;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:14px ;
+	float:right;
+	font-size:35px;
+	
+}
+</style>
+</head>
+<body style="background-color:#F0F0F0" onload="alert_msg()">
+
+<ul>
+	<li><a href="#home">Home</a></li>
+	<li><a href="#News">News</a></li>
+	<li class="dropdown"><a href="#News" class="dropbtn">DAMS</a>
+		<div class="dropdown-content">
+			<a href="#">Link1</a>
+			<a href="#">Link2</a>
+			<a href="#">Link3</a>
+		</div>
+	</li>
+</ul>
+<button onclick="updateValue()" >RELEASE WATER</button>
+<script>
+	function updateValue()
+	{
+		setTimeout(function(){document.getElementById("t1").innerHTML = "1000";},5000);
+		setTimeout(function(){document.getElementById("t2").innerHTML = "Safe";},5000);
+		setTimeout(function(){ document.getElementById("t2").style.backgroundColor = "00CC00";},5000);
+		setTimeout(function(){ alert("Water has been released from the dam"); }, 7000);
+	}
+	function alert_msg()
+	{
+		setTimeout(function(){ alert("Water has to be released form Pakal Dul Dam on 1st January 2018 at 11:30 PM"); }, 4000 );
+	}
+	
+</script>
+<table>
+	<tr style="background-color:#FF0000;">
+		<th style="background-color:#FF0000;">S.No</th>
+		<th style="background-color:#FF0000;">Name</th>
+		<th style="background-color:#FF0000;">Water Level</th>
+		<th style="background-color:#FF0000;">Release Date</th>
+		<th style="background-color:#FF0000;">Release Time</th>
+	</tr>
+	<tr>
+		<td>1.</td>
+		<td>Pakal Dul Dam<b>(DAM2)</b></td>
+		<td>1500</td>
+		<td>1-1-2018(Mon)</td>
+		<td>11:30 PM</td>
+	</tr>
+</table>
+<table id="t01">
+	<tr>
+		<th>Name</th>
+		<th>Purpose</th>
+		<th>River</th>
+		<th>Nearest City</th>
+		<th>District</th>
+		<th>State</th>
+		<th>Basin</th>
+		<th>Completion Year</th>
+		<th>Type</th>
+		<th>Length(m)</th>
+		<th>Storage Capacity(MCM)</th>
+		<th>Current water-level</th>
+		<th>Status</th>
+	</tr>
+	<tr>
+		<td>Tehri Dam</td>
+		<td>Hydroelectric,Irrigation</td>
+		<td>Bhagirathi</td>
+		<td>Pratapnagar</td>
+		<td>Tehri Garhwal</td>
+		<td>Uttarakhand</td>
+		<td>Ganga</td>
+		<td>2005</td>
+		<td>Earthen / Gravity & Masonry</td>
+		<td>575</td>
+		<td>3540</td>
+		<td>2800</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Idukki Arch Dam</td>
+		<td>Hydroelectric</td>
+		<td>Periyar	</td>
+		<td>Todupulai</td>
+		<td>Idukki</td>
+		<td>Kerala</td>
+		<td>West flowing rivers from Tadri to Kanyakumari</td>
+		<td>1974</td>
+		<td>Gravity & Masonry</td>
+		<td>366</td>
+		<td>1998.57</td>
+		<td>1500</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Bhakra Dam</td>
+		<td>Hydroelectric,Irrigation,Recreation</td>
+		<td>Satluj</td>
+		<td>Bilaspur</td>
+		<td>Bilaspur</td>
+		<td>Himachal Pradesh</td>
+		<td>Indus up to International Border</td>
+		<td>1963</td>
+		<td>Earthen / Gravity & Masonry</td>
+		<td>518.16</td>
+		<td>9867.84</td>
+		<td>7650</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Pakal Dul Dam<b>(DAM2)</b></td>
+		<td>Hydroelectric</td>
+		<td>Marusudar</td>
+		<td>Kishtwar</td>
+		<td>Kishtwar</td>
+		<td>Jammu & Kashmir</td>
+		<td>Indus up to International Border</td>
+		<td>1976</td>
+		<td>Earthen / Gravity & Masonry</td>
+		<td>305</td>
+		<td>1254</td>
+		<td id="t1">1500</td>
+		<td style="color:white; background-color:#FF0000" id="t2">Danger</td>
+	</tr>
+	
+
+	<tr>
+		<td>Sardar Sarover Gujarat Dam</td>
+		<td>Hydroelectric,Irrigation	</td>
+		<td>Narmada</td>
+		<td>Rajpipla</td>
+		<td>Narmada</td>
+		<td>Gujarat</td>
+		<td>Narmada</td>
+		<td></td>
+		<td>Gravity & Masonry</td>
+		<td>1210</td>
+		<td>9500</td>
+		<td>7864</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Srisailam (N.S.R.S.P) Dam</td>
+		<td>Hydroelectric,Irrigation</td>
+		<td>Krishna</td>
+		<td>Nandikotkur</td>
+		<td>Kurnool</td>
+		<td>Telangana</td>
+		<td>Krishna</td>
+		<td>1984</td>
+		<td>Earthen</td>
+		<td>512</td>
+		<td>8724.88</td>
+		<td>4598</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Ranjit Sagar Dam</td>
+		<td>Flood Control,Hydroelectric,Irrigation</td>
+		<td>Ravi</td>
+		<td>Pathankot</td>
+		<td>Kathua</td>
+		<td>Punjab</td>
+		<td>Indus up to International Border</td>
+		<td>1999</td>
+		<td>Earthen</td>
+		<td>617</td>
+		<td>3280</td>
+		<td>3000</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Baglihar Dam</td>
+		<td>Hydroelectric</td>
+		<td>CHENAB</td>
+		<td>Ramban</td>
+		<td>Ramban</td>
+		<td>Jammu & Kashmir</td>
+		<td>Indus up to International Border</td>
+		<td>2009</td>
+		<td>Gravity & Masonry</td>
+		<td>364.362</td>
+		<td>475</td>
+		<td>324</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Chamera I Dam</td>
+		<td>Hydroelectric</td>
+		<td>Ravi</td>
+		<td>Bhattiyat</td>
+		<td>Chamba</td>
+		<td>Himachal Pradesh</td>
+		<td>Indus up to International Border</td>
+		<td>1994</td>
+		<td>Earthen / Gravity & Masonry</td>
+		<td>295</td>
+		<td>242.3</td>
+		<td>201.5</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Cheruthoni (Eb) Dam</td>
+		<td>Hydroelectric</td>
+		<td>Cheruthoni</td>
+		<td>Todupulai</td>
+		<td>Idukki</td>
+		<td>Kerala</td>
+		<td>West flowing rivers from Tadri to Kanyakumari</td>
+		<td>1976</td>
+		<td>Earthen / Gravity & Masonry</td>
+		<td>651</td>
+		<td>1998.57</td>
+		<td>1231</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+	<tr>
+		<td>Kakki (Eb) Dam</td>
+		<td>Hydroelectric</td>
+		<td>Kakki</td>
+		<td>Rani</td>
+		<td>Pathanamthitta</td>
+		<td>Kerala</td>
+		<td>West flowing rivers from Tadri to Kanyakumari</td>
+		<td>1966</td>
+		<td>Earthen / Gravity & </td>
+		<td>336.19</td>
+		<td>454.07</td>
+		<td>220.8</td>
+		<td style="color:white; background-color:00CC00">Safe</td>
+	</tr>
+</table>
+</body>
+</html>
